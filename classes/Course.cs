@@ -7,12 +7,15 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace firstSessionwindowsform.classes
 {
-    class Course : BaseEntity
+    public class Course : BaseEntity
     {
+        public Course() : base() { }
         public Course(string Course)
         {
             Course = Course;
         }
+        public List<CourseList> courseLists { get; set; }
+        public List<Course> Courses { get; set; }
         public string CourseTitle { get;}
         public string Info { get; }
         public DateTime StartDate { get; }

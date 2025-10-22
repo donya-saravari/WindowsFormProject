@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.classes
 {
-    class Student : BaseEntity
+   public class Student : BaseEntity
     {
+        public Student():base()
+        { }
         public Student(string userName, string password) {
             if(string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
             {
@@ -18,9 +20,13 @@ namespace firstSessionwindowsform.classes
         }
         public string SfirstName { get; set; }
         public string SlastName { get; set; }
+        public string FullName { get {
+                return SfirstName+" "+SlastName;
+            }
+        }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public string SponeNumber { get; set; }
+        public string SphoneNumber { get; set; }
         public string SnationalCode { get; set; }
         public DateTime SBirthDate { get; set; }
         public DateTime registerDate { get;}
@@ -32,5 +38,6 @@ namespace firstSessionwindowsform.classes
             }
 
         }
+       
     }
 }

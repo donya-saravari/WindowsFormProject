@@ -7,8 +7,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace firstSessionwindowsform.classes
 {
-    class Teacher : BaseEntity
+   public class Teacher : BaseEntity
     {
+        public Teacher(): base() { }
         public Teacher(string nationalCode, string userName, string password)
         {
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(nationalCode))
@@ -22,6 +23,9 @@ namespace firstSessionwindowsform.classes
         }
         public string TfirstName { get; set; }
         public string TlastName { get; set; }
+        public string FullName { get {
+            return TfirstName + " " + TlastName;
+            } }
         public string TphoneNumber { get; set; }
         public string TnationalCode { get; set; }
         public DateTime TBirthDate { get; set; }

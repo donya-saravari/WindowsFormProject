@@ -1,5 +1,6 @@
 using firstSessionwindowsform.classes;
 using firstSessionwindowsform.forms;
+using System.Drawing.Text;
 using System.Security.Cryptography.X509Certificates;
 
 namespace firstSessionwindowsform
@@ -13,6 +14,7 @@ namespace firstSessionwindowsform
 
         private void LogInbutton_Click(object sender, EventArgs e)
         {
+            List<Student> students = new List<Student>();
             string UserName = UserNameTextBox.Text;
             string Password = PasswordTextBox.Text;
             if (TeacherRadioButton.Checked)
@@ -22,17 +24,18 @@ namespace firstSessionwindowsform
             }
             else if (StudentRadioButton.Checked)
             {
-                LandingPage landingPage = new LandingPage();
-                landingPage.Show();
+                if (StudentCreateAcount.ValidateStudent(students,UserName, Password))
+                {
+                    EnglishForm landingPage = new EnglishForm();
+                    landingPage.Show();
+                }
             }
             else
             {
                 string error = "Please check a radio button";
                 RadioButtoErrorProvider.SetError(RadioButtonGroupBox, error);
             }
-            //Student student = new Student(userName: UserName,password: Password);
-            //if (student.UserName = UserName && student.Password = Password)
-            //    return true;
+
 
         }
 

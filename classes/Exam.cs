@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.classes
 {
-    class Exam : BaseEntity
+    public class Exam : BaseEntity
     {
+    public Exam() : base() { }
     public Course Id { get; set; }
     public int Score { get; }
     public DateTime ExamDate { get; }

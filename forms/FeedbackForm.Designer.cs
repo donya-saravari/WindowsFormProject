@@ -1,6 +1,6 @@
-﻿namespace firstSessionwindowsform.forms
+﻿namespace firstSessionwindowsform.EnglishForms
 {
-    partial class LandingPage
+    partial class FeedbackForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // LandingPage
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(801, 450);
-            Name = "LandingPage";
-            Text = "LandingPage";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "EnglishFeedback";
         }
 
         #endregion

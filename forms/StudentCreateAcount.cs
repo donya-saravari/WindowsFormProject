@@ -11,13 +11,20 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using firstSessionwindowsform.classes;
 using firstSessionwindowsform.Help;
+using firstSessionwindowsform.Services;
 namespace firstSessionwindowsform
 {
     public partial class StudentCreateAcount : Form
     {
+        StudentService studentService;
         public StudentCreateAcount()
         {
             InitializeComponent();
+            studentService = new StudentService();
+        }
+        public static bool ValidateStudent(List<Student> students,string UserName, string password)
+        {
+            return students.Any(s=> s.UserName == UserName && s.Password == password);
         }
 
         private void createAcountButton_Click(object sender, EventArgs e)
@@ -25,12 +32,12 @@ namespace firstSessionwindowsform
             Student student = new Student(userName: UserNameTextBox.Text, password: PasswordTextBox.Text);
             student.SfirstName = firstNameTextBox.Text;
             student.SlastName = lastNameTextBox.Text;
-            student.SponeNumber = phoneNumberTextBox.Text;
+            student.SphoneNumber = phoneNumberTextBox.Text;
             student.SnationalCode = nationalCodeTextBox.Text;
-            student.SBirthDate = DateTime.Parse(AgeDateTimePicker.Text);
-            List<Student> students = new List<Student>();
-            students.Add(student);
-            PhoneNumberHelper.IsValidPhoneNumber(student.SponeNumber);
+            student.SBirthDate = AgeDateTimePicker.Value;
+            student.Date = registerDatedateTimePicker.Value;
+            studentService.Add(student);
+            PhoneNumberHelper.IsValidPhoneNumber(student.SphoneNumber);
             ResetForm();
         }
 

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.classes
 {
-    public class WhatchList
+    public class CourseList
     {
-        public Student studentId {  get; set; }
-        public Course courseId { get; set; }
+        public Course Course { get; set; }
+        public Teacher FullName { get; set; }
+        public decimal Price { get; set; }
     }
 }

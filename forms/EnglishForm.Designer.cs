@@ -1,6 +1,6 @@
 ﻿namespace firstSessionwindowsform.forms
 {
-    partial class Dashbord
+    partial class EnglishForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnglishForm));
             menuStrip1 = new MenuStrip();
             accountToolStripMenuItem = new ToolStripMenuItem();
             coursesToolStripMenuItem1 = new ToolStripMenuItem();
@@ -35,7 +36,6 @@
             teachersToolStripMenuItem = new ToolStripMenuItem();
             coursesToolStripMenuItem2 = new ToolStripMenuItem();
             englishToolStripMenuItem = new ToolStripMenuItem();
-            informationToolStripMenuItem = new ToolStripMenuItem();
             studentsToolStripMenuItem = new ToolStripMenuItem();
             feedbackToolStripMenuItem = new ToolStripMenuItem();
             examToolStripMenuItem = new ToolStripMenuItem();
@@ -62,7 +62,14 @@
             examToolStripMenuItem3 = new ToolStripMenuItem();
             enrollExamToolStripMenuItem3 = new ToolStripMenuItem();
             certificateToolStripMenuItem3 = new ToolStripMenuItem();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            EnglishEnrollButton = new Button();
+            FeedbackLinkLabel = new LinkLabel();
+            StudentLinkLabel = new LinkLabel();
+            ExamandCertificateLinkLabel = new LinkLabel();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -71,8 +78,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { accountToolStripMenuItem, coursesToolStripMenuItem1, coursesToolStripMenuItem2 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
-            menuStrip1.TabIndex = 1;
+            menuStrip1.Size = new Size(801, 28);
+            menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
             // accountToolStripMenuItem
@@ -112,34 +119,28 @@
             // 
             // englishToolStripMenuItem
             // 
-            englishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem, studentsToolStripMenuItem, feedbackToolStripMenuItem, examToolStripMenuItem });
+            englishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, feedbackToolStripMenuItem, examToolStripMenuItem });
             englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            englishToolStripMenuItem.Size = new Size(144, 26);
+            englishToolStripMenuItem.Size = new Size(224, 26);
             englishToolStripMenuItem.Text = "English";
-            // 
-            // informationToolStripMenuItem
-            // 
-            informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            informationToolStripMenuItem.Size = new Size(170, 26);
-            informationToolStripMenuItem.Text = "Information";
             // 
             // studentsToolStripMenuItem
             // 
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(170, 26);
+            studentsToolStripMenuItem.Size = new Size(155, 26);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // feedbackToolStripMenuItem
             // 
             feedbackToolStripMenuItem.Name = "feedbackToolStripMenuItem";
-            feedbackToolStripMenuItem.Size = new Size(170, 26);
+            feedbackToolStripMenuItem.Size = new Size(155, 26);
             feedbackToolStripMenuItem.Text = "Feedback";
             // 
             // examToolStripMenuItem
             // 
             examToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { enrollExamToolStripMenuItem, certificateToolStripMenuItem });
             examToolStripMenuItem.Name = "examToolStripMenuItem";
-            examToolStripMenuItem.Size = new Size(170, 26);
+            examToolStripMenuItem.Size = new Size(155, 26);
             examToolStripMenuItem.Text = "Exam";
             // 
             // enrollExamToolStripMenuItem
@@ -158,7 +159,7 @@
             // 
             frenchToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem1, studentsToolStripMenuItem1, feedbackToolStripMenuItem1, examToolStripMenuItem1 });
             frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-            frenchToolStripMenuItem.Size = new Size(144, 26);
+            frenchToolStripMenuItem.Size = new Size(224, 26);
             frenchToolStripMenuItem.Text = "French";
             // 
             // informationToolStripMenuItem1
@@ -166,6 +167,7 @@
             informationToolStripMenuItem1.Name = "informationToolStripMenuItem1";
             informationToolStripMenuItem1.Size = new Size(170, 26);
             informationToolStripMenuItem1.Text = "Information";
+            informationToolStripMenuItem1.Click += informationToolStripMenuItem1_Click;
             // 
             // studentsToolStripMenuItem1
             // 
@@ -202,32 +204,33 @@
             // 
             spanishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem2, studentsToolStripMenuItem2, feedbackToolStripMenuItem2, examToolStripMenuItem2 });
             spanishToolStripMenuItem.Name = "spanishToolStripMenuItem";
-            spanishToolStripMenuItem.Size = new Size(144, 26);
+            spanishToolStripMenuItem.Size = new Size(224, 26);
             spanishToolStripMenuItem.Text = "Spanish";
             // 
             // informationToolStripMenuItem2
             // 
             informationToolStripMenuItem2.Name = "informationToolStripMenuItem2";
-            informationToolStripMenuItem2.Size = new Size(170, 26);
+            informationToolStripMenuItem2.Size = new Size(224, 26);
             informationToolStripMenuItem2.Text = "Information";
+            informationToolStripMenuItem2.Click += informationToolStripMenuItem2_Click;
             // 
             // studentsToolStripMenuItem2
             // 
             studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
-            studentsToolStripMenuItem2.Size = new Size(170, 26);
+            studentsToolStripMenuItem2.Size = new Size(224, 26);
             studentsToolStripMenuItem2.Text = "Students";
             // 
             // feedbackToolStripMenuItem2
             // 
             feedbackToolStripMenuItem2.Name = "feedbackToolStripMenuItem2";
-            feedbackToolStripMenuItem2.Size = new Size(170, 26);
+            feedbackToolStripMenuItem2.Size = new Size(224, 26);
             feedbackToolStripMenuItem2.Text = "Feedback";
             // 
             // examToolStripMenuItem2
             // 
             examToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { enrollExamToolStripMenuItem2, certificateToolStripMenuItem2 });
             examToolStripMenuItem2.Name = "examToolStripMenuItem2";
-            examToolStripMenuItem2.Size = new Size(170, 26);
+            examToolStripMenuItem2.Size = new Size(224, 26);
             examToolStripMenuItem2.Text = "Exam";
             // 
             // enrollExamToolStripMenuItem2
@@ -246,32 +249,33 @@
             // 
             germanToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem3, studentsToolStripMenuItem3, feedbackToolStripMenuItem3, examToolStripMenuItem3 });
             germanToolStripMenuItem.Name = "germanToolStripMenuItem";
-            germanToolStripMenuItem.Size = new Size(144, 26);
+            germanToolStripMenuItem.Size = new Size(224, 26);
             germanToolStripMenuItem.Text = "German";
             // 
             // informationToolStripMenuItem3
             // 
             informationToolStripMenuItem3.Name = "informationToolStripMenuItem3";
-            informationToolStripMenuItem3.Size = new Size(170, 26);
+            informationToolStripMenuItem3.Size = new Size(224, 26);
             informationToolStripMenuItem3.Text = "Information";
+            informationToolStripMenuItem3.Click += informationToolStripMenuItem3_Click;
             // 
             // studentsToolStripMenuItem3
             // 
             studentsToolStripMenuItem3.Name = "studentsToolStripMenuItem3";
-            studentsToolStripMenuItem3.Size = new Size(170, 26);
+            studentsToolStripMenuItem3.Size = new Size(224, 26);
             studentsToolStripMenuItem3.Text = "Students";
             // 
             // feedbackToolStripMenuItem3
             // 
             feedbackToolStripMenuItem3.Name = "feedbackToolStripMenuItem3";
-            feedbackToolStripMenuItem3.Size = new Size(170, 26);
+            feedbackToolStripMenuItem3.Size = new Size(224, 26);
             feedbackToolStripMenuItem3.Text = "Feedback";
             // 
             // examToolStripMenuItem3
             // 
             examToolStripMenuItem3.DropDownItems.AddRange(new ToolStripItem[] { enrollExamToolStripMenuItem3, certificateToolStripMenuItem3 });
             examToolStripMenuItem3.Name = "examToolStripMenuItem3";
-            examToolStripMenuItem3.Size = new Size(170, 26);
+            examToolStripMenuItem3.Size = new Size(224, 26);
             examToolStripMenuItem3.Text = "Exam";
             // 
             // enrollExamToolStripMenuItem3
@@ -286,56 +290,129 @@
             certificateToolStripMenuItem3.Size = new Size(170, 26);
             certificateToolStripMenuItem3.Text = "Certificate";
             // 
-            // Dashbord
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(29, 62);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(252, 188);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(299, 71);
+            label1.Name = "label1";
+            label1.Size = new Size(479, 120);
+            label1.TabIndex = 4;
+            label1.Text = resources.GetString("label1.Text");
+            // 
+            // EnglishEnrollButton
+            // 
+            EnglishEnrollButton.BackColor = Color.MidnightBlue;
+            EnglishEnrollButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            EnglishEnrollButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            EnglishEnrollButton.ForeColor = Color.White;
+            EnglishEnrollButton.Location = new Point(314, 211);
+            EnglishEnrollButton.Name = "EnglishEnrollButton";
+            EnglishEnrollButton.Size = new Size(126, 29);
+            EnglishEnrollButton.TabIndex = 5;
+            EnglishEnrollButton.Text = "Enroll";
+            EnglishEnrollButton.UseVisualStyleBackColor = false;
+            // 
+            // FeedbackLinkLabel
+            // 
+            FeedbackLinkLabel.AutoSize = true;
+            FeedbackLinkLabel.Location = new Point(459, 215);
+            FeedbackLinkLabel.Name = "FeedbackLinkLabel";
+            FeedbackLinkLabel.Size = new Size(72, 20);
+            FeedbackLinkLabel.TabIndex = 6;
+            FeedbackLinkLabel.TabStop = true;
+            FeedbackLinkLabel.Text = "Feedback";
+            // 
+            // StudentLinkLabel
+            // 
+            StudentLinkLabel.AutoSize = true;
+            StudentLinkLabel.Location = new Point(548, 215);
+            StudentLinkLabel.Name = "StudentLinkLabel";
+            StudentLinkLabel.Size = new Size(66, 20);
+            StudentLinkLabel.TabIndex = 7;
+            StudentLinkLabel.TabStop = true;
+            StudentLinkLabel.Text = "Students";
+            // 
+            // ExamandCertificateLinkLabel
+            // 
+            ExamandCertificateLinkLabel.AutoSize = true;
+            ExamandCertificateLinkLabel.Location = new Point(632, 215);
+            ExamandCertificateLinkLabel.Name = "ExamandCertificateLinkLabel";
+            ExamandCertificateLinkLabel.Size = new Size(146, 20);
+            ExamandCertificateLinkLabel.TabIndex = 16;
+            ExamandCertificateLinkLabel.TabStop = true;
+            ExamandCertificateLinkLabel.Text = "Exam and Certificate";
+            // 
+            // EnglishForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateBlue;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(801, 270);
+            Controls.Add(ExamandCertificateLinkLabel);
+            Controls.Add(StudentLinkLabel);
+            Controls.Add(FeedbackLinkLabel);
+            Controls.Add(EnglishEnrollButton);
+            Controls.Add(label1);
+            Controls.Add(pictureBox2);
             Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "Dashbord";
-            Text = "Dashbord";
+            Name = "EnglishForm";
+            Text = "English";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
+
         private MenuStrip menuStrip1;
         private ToolStripMenuItem accountToolStripMenuItem;
         private ToolStripMenuItem coursesToolStripMenuItem1;
+        private ToolStripMenuItem studentsToolStripMenuItem4;
+        private ToolStripMenuItem teachersToolStripMenuItem;
         private ToolStripMenuItem coursesToolStripMenuItem2;
         private ToolStripMenuItem englishToolStripMenuItem;
-        private ToolStripMenuItem frenchToolStripMenuItem;
-        private ToolStripMenuItem spanishToolStripMenuItem;
-        private ToolStripMenuItem informationToolStripMenuItem;
         private ToolStripMenuItem studentsToolStripMenuItem;
         private ToolStripMenuItem feedbackToolStripMenuItem;
         private ToolStripMenuItem examToolStripMenuItem;
         private ToolStripMenuItem enrollExamToolStripMenuItem;
         private ToolStripMenuItem certificateToolStripMenuItem;
+        private ToolStripMenuItem frenchToolStripMenuItem;
         private ToolStripMenuItem informationToolStripMenuItem1;
         private ToolStripMenuItem studentsToolStripMenuItem1;
         private ToolStripMenuItem feedbackToolStripMenuItem1;
         private ToolStripMenuItem examToolStripMenuItem1;
         private ToolStripMenuItem enrollExamToolStripMenuItem1;
         private ToolStripMenuItem certificateToolStripMenuItem1;
+        private ToolStripMenuItem spanishToolStripMenuItem;
         private ToolStripMenuItem informationToolStripMenuItem2;
         private ToolStripMenuItem studentsToolStripMenuItem2;
-        private ToolStripMenuItem germanToolStripMenuItem;
         private ToolStripMenuItem feedbackToolStripMenuItem2;
         private ToolStripMenuItem examToolStripMenuItem2;
         private ToolStripMenuItem enrollExamToolStripMenuItem2;
         private ToolStripMenuItem certificateToolStripMenuItem2;
+        private ToolStripMenuItem germanToolStripMenuItem;
         private ToolStripMenuItem informationToolStripMenuItem3;
         private ToolStripMenuItem studentsToolStripMenuItem3;
         private ToolStripMenuItem feedbackToolStripMenuItem3;
         private ToolStripMenuItem examToolStripMenuItem3;
         private ToolStripMenuItem enrollExamToolStripMenuItem3;
         private ToolStripMenuItem certificateToolStripMenuItem3;
-        private ToolStripMenuItem studentsToolStripMenuItem4;
-        private ToolStripMenuItem teachersToolStripMenuItem;
+        private PictureBox pictureBox2;
+        private Label label1;
+        private Button EnglishEnrollButton;
+        private LinkLabel FeedbackLinkLabel;
+        private LinkLabel StudentLinkLabel;
+        private LinkLabel ExamandCertificateLinkLabel;
     }
 }

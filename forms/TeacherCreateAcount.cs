@@ -1,5 +1,6 @@
 ﻿using firstSessionwindowsform.classes;
 using firstSessionwindowsform.Help;
+using firstSessionwindowsform.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,11 @@ namespace firstSessionwindowsform.forms
 {
     public partial class TeacherCreateAcount : Form
     {
+        TeacherService teacherService;
         public TeacherCreateAcount()
         {
             InitializeComponent();
+            teacherService = new TeacherService();
         }
 
         private void ResetButton_Click(object sender, EventArgs e)
@@ -44,9 +47,10 @@ namespace firstSessionwindowsform.forms
             teacher.TphoneNumber = phoneNumberTextBox.Text;
             teacher.TnationalCode = nationalCodeTextBox.Text;
             teacher.Tdegree = DegreeComboBox.SelectedIndex;
-            teacher.TBirthDate = DateTime.Parse(BirthDateDateTimePicker.Text);
+            teacher.TBirthDate = BirthDateDateTimePicker.Value;
+            teacher.Date = registerDatedateTimePicker.Value;
             List<Teacher> teachers = new List<Teacher>();
-            teachers.Add(teacher);
+            teacherService.Add(teacher);
             PhoneNumberHelper.IsValidPhoneNumber(teacher.TphoneNumber);
             ResetForm();
         }

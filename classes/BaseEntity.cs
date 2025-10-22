@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.classes
 {
-   abstract class  BaseEntity
+   public abstract class  BaseEntity
     {
+        public BaseEntity() 
+        {
+            Date = DateTime.Now;
+        }
         public int Id { get; }
         public DateTime Date { get; set; }
     }

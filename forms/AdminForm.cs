@@ -1,4 +1,5 @@
 ﻿using firstSessionwindowsform.classes;
+using firstSessionwindowsform.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,25 +12,25 @@ using System.Windows.Forms;
 
 namespace firstSessionwindowsform.forms
 {
-    public partial class Admin : Form
+    public partial class AdminForm : Form
     {
-        List<Course> courses;
-        public Admin()
+        CourseService courseServices;
+        public AdminForm()
         {
             InitializeComponent();
-            courses = new List<Course>();
-            FillDateGrid(courses);
+            courseServices = new CourseService();
+            FillDateGrid(courseServices.GetAll());
 
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             string Course = CourseTextBox.Text;
-            //DateTime RegisterDate = RegisterDateTimePicker.
-            //DateTime ExamDate = ExamDateTimePicker.
+            DateTime RegisterDate = RegisterDateTimePicker.Value;
+            DateTime ExamDate = ExamDateTimePicker.Value;
             Course course = new Course(Course : CourseTextBox.Text);
-            courses.Add(course);
-            FillDateGrid(courses);
+            courseServices.Add(course);
+            FillDateGrid(courseServices.GetAll());
         }
         private void FillDateGrid(List<Course> courses)
         {

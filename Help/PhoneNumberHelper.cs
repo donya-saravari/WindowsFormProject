@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.Help
 {
-    static class PhoneNumberHelper
+    public static class PhoneNumberHelper
     {
         public static bool IsValidPhoneNumber(string phoneNumber)
         {

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 using firstSessionwindowsform.enums;
 namespace firstSessionwindowsform.classes
 {
-    class Certificate : BaseEntity
+    public class Certificate : BaseEntity
     {
+        public Certificate() : base() { }
         public Student StudentId { get; }
         public Course CourseId { get; }
         public DateTime CertificateDate { get; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace firstSessionwindowsform.enums
 {
-    enum CertificateStatus
+    public enum CertificateStatus
     {
         None = 0,
         WaitingForApprove = 1,
