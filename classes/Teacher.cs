@@ -23,9 +23,35 @@ namespace firstSessionwindowsform.classes
         }
         public string TfirstName { get; set; }
         public string TlastName { get; set; }
-        public string FullName { get {
-            return TfirstName + " " + TlastName;
-            } }
+        public string FullName
+        {
+            get
+            {
+                return TfirstName + " " + TlastName;
+            }
+            set
+            {
+                var names = value.Split(' ');
+                if (names.Length > 1)
+                {
+                    TfirstName = names[0];
+                    TlastName = names[1];
+                }
+                else
+                {
+                    TfirstName = value;
+                    TlastName = string.Empty;
+                }
+            }
+        }
+        public Teacher(string fullname)
+        {
+            FullName = fullname;
+        }
+        public override string ToString()
+        {
+            return FullName;
+        }
         public string TphoneNumber { get; set; }
         public string TnationalCode { get; set; }
         public DateTime TBirthDate { get; set; }

@@ -18,17 +18,16 @@ namespace firstSessionwindowsform.forms
         public AdminForm()
         {
             InitializeComponent();
-            courseServices = new CourseService();
-            FillDateGrid(courseServices.GetAll());
 
+            courseServices = new CourseService();
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            string Course = CourseTextBox.Text;
-            DateTime RegisterDate = RegisterDateTimePicker.Value;
-            DateTime ExamDate = ExamDateTimePicker.Value;
-            Course course = new Course(Course : CourseTextBox.Text);
+            Teacher teacher = new Teacher();
+            Teacher SelectedTeacher = (Teacher) TeacherComboBox.SelectedItem;
+            Course course = new Course(Course : CourseTextBox.Text, startDate: RegisterDateTimePicker.Value, examDate: ExamDateTimePicker.Value,
+                                        fullname: SelectedTeacher, capacity: int.Parse(CapacityNumericUpDown.ToString()), available: AvailableCheckBox.Checked, price: int.Parse(PriceTextBox.Text));
             courseServices.Add(course);
             FillDateGrid(courseServices.GetAll());
         }

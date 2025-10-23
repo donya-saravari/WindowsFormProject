@@ -10,18 +10,31 @@ namespace firstSessionwindowsform.classes
     public class Course : BaseEntity
     {
         public Course() : base() { }
-        public Course(string Course)
+        public Course(string Course, DateTime startDate, DateTime examDate, Teacher fullname , int capacity , bool available ,int price)
         {
-            Course = Course;
+            CourseTitle = Course;
+            StartDate = startDate;
+            ExamDate = examDate;
+            FullName = fullname;
+            Capacity = capacity;
+            Available = available;
+            Price = price;
+        }
+        public Teacher SelectedTeacher { get; set; }
+        public Course (Teacher fullname)
+        {
+            SelectedTeacher = fullname;
         }
         public List<CourseList> courseLists { get; set; }
         public List<Course> Courses { get; set; }
-        public string CourseTitle { get;}
-        public string Info { get; }
-        public DateTime StartDate { get; }
-        public DateTime EndDate { get;}
-        public Teacher Teacher { get; }
-        public int Capacity { get; }
-        public bool Available { get; }
+        public string CourseTitle { get; set; }
+        public string Info { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime ExamDate { get; set; }
+        public Teacher FullName { get; set; }
+        
+        public int Capacity { get; set; }
+        public bool Available { get; set; }
+        public int Price { get; set; }
     }
 }
