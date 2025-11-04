@@ -1,5 +1,6 @@
 using firstSessionwindowsform.classes;
 using firstSessionwindowsform.forms;
+using Newtonsoft.Json;
 using System.Drawing.Text;
 using System.Security.Cryptography.X509Certificates;
 
@@ -17,11 +18,29 @@ namespace firstSessionwindowsform
             List<Student> students = new List<Student>();
             string UserName = UserNameTextBox.Text;
             string Password = PasswordTextBox.Text;
+            string pathTeacherList = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "Teacher.json");
+            if (!File.Exists(pathTeacherList))
+            {
+                MessageBox.Show("Invalid Path");
+                return;
+            }
+
             if (TeacherRadioButton.Checked)
             {
-                Dashbord dashbord = new Dashbord();
-                dashbord.Show();
+
+                string TeacherContentList = File.ReadAllText(pathTeacherList);
+                List<TeacherList> teacherLists = JsonConvert.DeserializeObject<List<TeacherList>>(TeacherContentList);
+                var LoginTeacher = teacherLists.Where(teacher => teacher.UserName == UserName && teacher.Password == Password).First();
+                
+                if (LoginTeacher != null) {
+                    {
+                        Dashbord dashbord = new Dashbord();
+                        dashbord.ShowDialog();
+                        return;
+                    }
+                }
             }
+            
             else if (StudentRadioButton.Checked)
             {
                 if (StudentCreateAcount.ValidateStudent(students,UserName, Password))
