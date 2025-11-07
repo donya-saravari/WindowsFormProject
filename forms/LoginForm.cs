@@ -1,4 +1,4 @@
-using firstSessionwindowsform.classes;
+using BaseBackend.classes;
 using firstSessionwindowsform.forms;
 using Newtonsoft.Json;
 using System.Drawing.Text;
@@ -30,7 +30,7 @@ namespace firstSessionwindowsform
 
                 string TeacherContentList = File.ReadAllText(pathTeacherList);
                 List<TeacherList> teacherLists = JsonConvert.DeserializeObject<List<TeacherList>>(TeacherContentList);
-                var LoginTeacher = teacherLists.Where(teacher => teacher.UserName == UserName && teacher.Password == Password).First();
+                var LoginTeacher = teacherLists.Where(teacher => teacher.UserName == UserName && teacher.Password == Password);
                 
                 if (LoginTeacher != null) {
                     {
