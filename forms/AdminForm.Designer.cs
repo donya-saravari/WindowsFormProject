@@ -207,7 +207,7 @@
             Controls.Add(CourseTextBox);
             Controls.Add(CoursesDataGridView);
             Name = "AdminForm";
-            Text = "Basket";
+            Text = "Create Course";
             ((System.ComponentModel.ISupportInitialize)CoursesDataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)CapacityNumericUpDown).EndInit();
             ResumeLayout(false);

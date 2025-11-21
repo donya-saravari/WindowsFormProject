@@ -44,6 +44,7 @@
             label2 = new Label();
             RadioButtoErrorProvider = new ErrorProvider(components);
             RadioButtonGroupBox = new GroupBox();
+            AdminRadioButton = new RadioButton();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)RadioButtoErrorProvider).BeginInit();
             RadioButtonGroupBox.SuspendLayout();
@@ -98,7 +99,7 @@
             // StudentRadioButton
             // 
             StudentRadioButton.AutoSize = true;
-            StudentRadioButton.Location = new Point(105, 6);
+            StudentRadioButton.Location = new Point(172, 6);
             StudentRadioButton.Name = "StudentRadioButton";
             StudentRadioButton.Size = new Size(81, 24);
             StudentRadioButton.TabIndex = 5;
@@ -109,7 +110,7 @@
             // TeacherRadioButton
             // 
             TeacherRadioButton.AutoSize = true;
-            TeacherRadioButton.Location = new Point(6, 6);
+            TeacherRadioButton.Location = new Point(83, 6);
             TeacherRadioButton.Name = "TeacherRadioButton";
             TeacherRadioButton.Size = new Size(81, 24);
             TeacherRadioButton.TabIndex = 6;
@@ -177,13 +178,25 @@
             // 
             // RadioButtonGroupBox
             // 
+            RadioButtonGroupBox.Controls.Add(AdminRadioButton);
             RadioButtonGroupBox.Controls.Add(StudentRadioButton);
             RadioButtonGroupBox.Controls.Add(TeacherRadioButton);
-            RadioButtonGroupBox.Location = new Point(84, 208);
+            RadioButtonGroupBox.Location = new Point(10, 208);
             RadioButtonGroupBox.Name = "RadioButtonGroupBox";
-            RadioButtonGroupBox.Size = new Size(192, 37);
+            RadioButtonGroupBox.Size = new Size(266, 37);
             RadioButtonGroupBox.TabIndex = 13;
             RadioButtonGroupBox.TabStop = false;
+            // 
+            // AdminRadioButton
+            // 
+            AdminRadioButton.AutoSize = true;
+            AdminRadioButton.Location = new Point(5, 6);
+            AdminRadioButton.Name = "AdminRadioButton";
+            AdminRadioButton.Size = new Size(74, 24);
+            AdminRadioButton.TabIndex = 15;
+            AdminRadioButton.TabStop = true;
+            AdminRadioButton.Text = "Admin";
+            AdminRadioButton.UseVisualStyleBackColor = true;
             // 
             // LoginForm
             // 
@@ -227,5 +240,6 @@
         private Label label2;
         private ErrorProvider RadioButtoErrorProvider;
         private GroupBox RadioButtonGroupBox;
+        private RadioButton AdminRadioButton;
     }
 }

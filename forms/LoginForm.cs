@@ -70,6 +70,11 @@ namespace firstSessionwindowsform
                 StudentCreateAcount studentCreateAcount = new StudentCreateAcount();
                 studentCreateAcount.Show();
             }
+            else if (AdminRadioButton.Checked)
+            {
+                AdminForm adminForm = new AdminForm();
+                adminForm.Show();
+            }
             else
             {
                 string error = "Please check a radio button";

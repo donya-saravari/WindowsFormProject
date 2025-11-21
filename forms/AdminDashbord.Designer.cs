@@ -1,6 +1,6 @@
-﻿namespace firstSessionwindowsform.EnglishForms
+﻿namespace firstSessionwindowsform.forms
 {
-    partial class StudentsForm
+    partial class AdminDashbord
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // StudentsForm
-            // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Name = "StudentsForm";
-            Text = "Students";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "AdminDashbord";
         }
 
         #endregion

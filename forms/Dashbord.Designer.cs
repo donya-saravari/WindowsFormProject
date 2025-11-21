@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashbord));
             menuStrip1 = new MenuStrip();
             accountToolStripMenuItem = new ToolStripMenuItem();
             coursesToolStripMenuItem1 = new ToolStripMenuItem();
@@ -62,7 +63,11 @@
             examToolStripMenuItem3 = new ToolStripMenuItem();
             enrollExamToolStripMenuItem3 = new ToolStripMenuItem();
             certificateToolStripMenuItem3 = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -286,18 +291,54 @@
             certificateToolStripMenuItem3.Size = new Size(170, 26);
             certificateToolStripMenuItem3.Text = "Certificate";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(218, 36);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(370, 390);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 16F);
+            label2.Location = new Point(475, 359);
+            label2.Name = "label2";
+            label2.Size = new Size(238, 41);
+            label2.TabIndex = 4;
+            label2.Text = "Secure Your Future";
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.Transparent;
+            label1.FlatStyle = FlatStyle.Flat;
+            label1.Font = new Font("Segoe UI", 16F);
+            label1.Location = new Point(105, 267);
+            label1.Name = "label1";
+            label1.Size = new Size(220, 43);
+            label1.TabIndex = 3;
+            label1.Text = "Grow Your Skills,";
+            // 
             // Dashbord
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkSlateBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Dashbord";
             Text = "Dashbord";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -337,5 +378,8 @@
         private ToolStripMenuItem certificateToolStripMenuItem3;
         private ToolStripMenuItem studentsToolStripMenuItem4;
         private ToolStripMenuItem teachersToolStripMenuItem;
+        private PictureBox pictureBox1;
+        private Label label1;
+        private Label label2;
     }
 }

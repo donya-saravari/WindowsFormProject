@@ -27,7 +27,7 @@ namespace firstSessionwindowsform.forms
             Teacher teacher = new Teacher();
             Teacher SelectedTeacher = (Teacher) TeacherComboBox.SelectedItem;
             Course course = new Course(Course : CourseTextBox.Text, startDate: RegisterDateTimePicker.Value, examDate: ExamDateTimePicker.Value,
-                                        fullname: SelectedTeacher, capacity: int.Parse(CapacityNumericUpDown.ToString()), available: AvailableCheckBox.Checked, price: int.Parse(PriceTextBox.Text));
+                                        fullname: SelectedTeacher, capacity: (int)CapacityNumericUpDown.Value, available: AvailableCheckBox.Checked, price: int.Parse(PriceTextBox.Text));
             courseServices.Add(course);
             FillDateGrid(courseServices.GetAll());
         }

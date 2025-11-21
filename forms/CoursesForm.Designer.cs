@@ -43,7 +43,6 @@
             label3 = new Label();
             pictureBox4 = new PictureBox();
             panel4 = new RoundedPanel();
-            vScrollBar1 = new VScrollBar();
             GermanEnrollButton = new Button();
             label4 = new Label();
             pictureBox5 = new PictureBox();
@@ -236,7 +235,6 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(vScrollBar1);
             panel4.Controls.Add(GermanEnrollButton);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(pictureBox5);
@@ -244,13 +242,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(632, 145);
             panel4.TabIndex = 2;
-            // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(0, 0);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(26, 125);
-            vScrollBar1.TabIndex = 5;
             // 
             // GermanEnrollButton
             // 
@@ -365,7 +356,7 @@
             // 
             englishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem, studentsToolStripMenuItem, feedbackToolStripMenuItem, examToolStripMenuItem });
             englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            englishToolStripMenuItem.Size = new Size(224, 26);
+            englishToolStripMenuItem.Size = new Size(144, 26);
             englishToolStripMenuItem.Text = "English";
             // 
             // informationToolStripMenuItem
@@ -410,7 +401,7 @@
             // 
             frenchToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem1, studentsToolStripMenuItem1, feedbackToolStripMenuItem1, examToolStripMenuItem1 });
             frenchToolStripMenuItem.Name = "frenchToolStripMenuItem";
-            frenchToolStripMenuItem.Size = new Size(224, 26);
+            frenchToolStripMenuItem.Size = new Size(144, 26);
             frenchToolStripMenuItem.Text = "French";
             // 
             // informationToolStripMenuItem1
@@ -455,33 +446,33 @@
             // 
             spanishToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem2, studentsToolStripMenuItem2, feedbackToolStripMenuItem2, examToolStripMenuItem2 });
             spanishToolStripMenuItem.Name = "spanishToolStripMenuItem";
-            spanishToolStripMenuItem.Size = new Size(224, 26);
+            spanishToolStripMenuItem.Size = new Size(144, 26);
             spanishToolStripMenuItem.Text = "Spanish";
             // 
             // informationToolStripMenuItem2
             // 
             informationToolStripMenuItem2.Name = "informationToolStripMenuItem2";
-            informationToolStripMenuItem2.Size = new Size(224, 26);
+            informationToolStripMenuItem2.Size = new Size(170, 26);
             informationToolStripMenuItem2.Text = "Information";
             informationToolStripMenuItem2.Click += informationToolStripMenuItem2_Click;
             // 
             // studentsToolStripMenuItem2
             // 
             studentsToolStripMenuItem2.Name = "studentsToolStripMenuItem2";
-            studentsToolStripMenuItem2.Size = new Size(224, 26);
+            studentsToolStripMenuItem2.Size = new Size(170, 26);
             studentsToolStripMenuItem2.Text = "Students";
             // 
             // feedbackToolStripMenuItem2
             // 
             feedbackToolStripMenuItem2.Name = "feedbackToolStripMenuItem2";
-            feedbackToolStripMenuItem2.Size = new Size(224, 26);
+            feedbackToolStripMenuItem2.Size = new Size(170, 26);
             feedbackToolStripMenuItem2.Text = "Feedback";
             // 
             // examToolStripMenuItem2
             // 
             examToolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { enrollExamToolStripMenuItem2, certificateToolStripMenuItem2 });
             examToolStripMenuItem2.Name = "examToolStripMenuItem2";
-            examToolStripMenuItem2.Size = new Size(224, 26);
+            examToolStripMenuItem2.Size = new Size(170, 26);
             examToolStripMenuItem2.Text = "Exam";
             // 
             // enrollExamToolStripMenuItem2
@@ -500,33 +491,33 @@
             // 
             germanToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informationToolStripMenuItem3, studentsToolStripMenuItem3, feedbackToolStripMenuItem3, examToolStripMenuItem3 });
             germanToolStripMenuItem.Name = "germanToolStripMenuItem";
-            germanToolStripMenuItem.Size = new Size(224, 26);
+            germanToolStripMenuItem.Size = new Size(144, 26);
             germanToolStripMenuItem.Text = "German";
             // 
             // informationToolStripMenuItem3
             // 
             informationToolStripMenuItem3.Name = "informationToolStripMenuItem3";
-            informationToolStripMenuItem3.Size = new Size(224, 26);
+            informationToolStripMenuItem3.Size = new Size(170, 26);
             informationToolStripMenuItem3.Text = "Information";
             informationToolStripMenuItem3.Click += informationToolStripMenuItem3_Click;
             // 
             // studentsToolStripMenuItem3
             // 
             studentsToolStripMenuItem3.Name = "studentsToolStripMenuItem3";
-            studentsToolStripMenuItem3.Size = new Size(224, 26);
+            studentsToolStripMenuItem3.Size = new Size(170, 26);
             studentsToolStripMenuItem3.Text = "Students";
             // 
             // feedbackToolStripMenuItem3
             // 
             feedbackToolStripMenuItem3.Name = "feedbackToolStripMenuItem3";
-            feedbackToolStripMenuItem3.Size = new Size(224, 26);
+            feedbackToolStripMenuItem3.Size = new Size(170, 26);
             feedbackToolStripMenuItem3.Text = "Feedback";
             // 
             // examToolStripMenuItem3
             // 
             examToolStripMenuItem3.DropDownItems.AddRange(new ToolStripItem[] { enrollExamToolStripMenuItem3, certificateToolStripMenuItem3 });
             examToolStripMenuItem3.Name = "examToolStripMenuItem3";
-            examToolStripMenuItem3.Size = new Size(224, 26);
+            examToolStripMenuItem3.Size = new Size(170, 26);
             examToolStripMenuItem3.Text = "Exam";
             // 
             // enrollExamToolStripMenuItem3
@@ -596,7 +587,6 @@
         private RoundedPanel roundedPanel1;
         private RoundedPanel roundedPanel2;
         private RoundedPanel roundedPanel3;
-        private VScrollBar vScrollBar1;
         private MenuStrip menuStrip2;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
